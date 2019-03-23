@@ -16,7 +16,7 @@ object ApiClient {
 
     fun getClient(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL_DEBUG)
+            .baseUrl(BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
             .client(ApiClient.getUnsafeOkHttpClient())
